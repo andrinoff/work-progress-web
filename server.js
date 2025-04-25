@@ -6,6 +6,8 @@ const PORT = 3000;
 
 http.createServer((req, res) => {
     let filePath = req.url === '/' ? '/index.html' : req.url;
+    if (filePath === '/download') filePath = '/download.html';
+    if (filePath === '/contacts') filePath = '/contacts.html';
     let extname = String(path.extname(filePath)).toLowerCase();
     let contentType = 'text/html';
 
