@@ -1,1 +1,1 @@
-website for [vscode-work-progress](github.com/andrinoff/vscode-work-progress)
+website for [vscode-work-progress](https://github.com/andrinoff/vscode-work-progress)
