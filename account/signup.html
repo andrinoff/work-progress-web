@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work Progress -- Sign In</title>
+    <link rel="icon" href="../icon.png" type="image/png">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Work Progress -- Sign Up</title>
 </head>
 <body>
     <div>
         <h1 id = "title-signin">Work Progress</h1><br>
-        <p>Sign In</p>
+
     </div>
     <div>
-        <form action="https://work-progress-backend.com/signin" method="POST">
+        <form action="https://work-progress-backend.com/signup" method="POST">
             <label for="email">Email:</label><br>
             <input type="email" id="email-input" name="email" required placeholder="Email" ><br>
             <label for="password">Password:</label><br>
             <input type="password" id="password-input" name="password" required placeholder="Password" minlength="8"><br>
-            <input type="submit" value="Sign In">
+            <input type="submit" id = "sign-up-button" class="sign-buttons" value="Sign Up">
         </form>
-        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        <p>Already have an account? <a href="signin.html" class ="link-normal" >Sign In</a></p>
     </div>
 </body>
 </html>

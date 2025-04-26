@@ -26,3 +26,29 @@ h1 {
     height: 20px;
     left: 40%
 }
+input {
+    font-family: monospace;
+    font-size: large;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid black;
+    outline: none;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    
+}
+.sign-buttons {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+}
