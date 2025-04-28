@@ -6,41 +6,24 @@ signinform.addEventListener('submit', function (event) {
     const email = document.getElementById('email-input').value;
     const password = document.getElementById('password-input').value;
 // TODO add the site
-    const isSignIn = fetch("work-progress/signIn", {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            email: email,
-            password: password
-        })
-    })
-    .then(response => {
-        if (response.ok) {
-            // TODO add the site
-            const apiKey = fetch("work-progress/getApi", {
+
+    const apiKey = fetch("https://work-progress-backend.vercel.app/api/server", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                     email: email,
-                    password: password
+                    password: password,
+                    sign: "in"
                 })
             }).then(response => {
+
                 if (response.ok) {
+                    localStorage.setItem('apiKey', apiKey);
+                    window.location.href = "api.html";
                     return response.json();
                 } else {
                     throw new Error('Failed to fetch API key');
                 }
-            }).then(data => {
-                const apiKey = data.apiKey;
-                localStorage.setItem('apiKey', apiKey);
-                window.location.href = "api.html";
-            });
-        } else {
-            alert("Invalid email or password");
-        }
-    })
-});
+            })});
