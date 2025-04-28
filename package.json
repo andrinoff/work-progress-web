@@ -4,8 +4,14 @@
     "description": "Local server to host Work Progress website",
     "main": "server.js",
     "scripts": {
-      "start": "node server.js"
+        "start": "node server.js"
     },
     "author": "Drey Smirnoff",
-    "license": "MIT"
-  }
+    "license": "MIT",
+    "dependencies": {
+        "cors": "^2.8.5"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.17"
+    }
+}
