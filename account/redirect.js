@@ -1,4 +1,3 @@
-// Inside redirect.js
 
 const signinform = document.getElementById('signin-form');
 const signupform = document.getElementById('signup-form');
@@ -41,6 +40,7 @@ if (signinform) {
             if (data && data.apiKey) {
                 // Store the ACTUAL API key from the response data
                 localStorage.setItem('apiKey', data.apiKey);
+                console.log("API key stored successfully:", data.apiKey);
 
                 // NOW redirect after successfully getting and storing the key
                 window.location.href = "api.html";
