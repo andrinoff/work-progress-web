@@ -1,4 +1,4 @@
-const apiKeyElement = document.getElementById("api-key");
+const apiKeyElement = document.getElementById("apiKey");
 console.log(localStorage.getItem("apiKey"))
 if (apiKeyElement) {
     const apiKey = localStorage.getItem("apiKey") || "no api key found :(";
