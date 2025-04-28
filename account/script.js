@@ -5,4 +5,4 @@ if (apiKeyElement) {
     apiKeyElement.innerHTML = apiKey;
     
 }
-alert("YOUR API KEY: " + localStorage.getItem("apiKey"));
+// alert("YOUR API KEY: " + localStorage.getItem("apiKey"));
