@@ -1,4 +1,4 @@
-require('dotenv').config();
+// 
 
 
 // --- Sign In and Sign Up Form Handlers ---
@@ -134,6 +134,7 @@ if (!signupform && window.location.pathname.includes('signup.html')) {
 // --- GitHub Sign-In Button Handler ---
 
 const githubButton = document.getElementById("github-signin-button");
+require('dotenv').config();
 if (githubButton) {
     githubButton.addEventListener("click", function () {
         const clientId = process.env.GITHUB_CLIENT_ID;
