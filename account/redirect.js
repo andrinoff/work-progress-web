@@ -1,6 +1,4 @@
-import dotenv from 'dotenv';
-dotenv.config();
-
+require('dotenv').config();
 
 
 // --- Sign In and Sign Up Form Handlers ---
