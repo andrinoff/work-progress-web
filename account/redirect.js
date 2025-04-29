@@ -1,4 +1,10 @@
+import dotenv from 'dotenv';
+dotenv.config();
 
+
+
+// --- Sign In and Sign Up Form Handlers ---
+// This script handles the sign-in and sign-up forms on the account page.
 
 
 
