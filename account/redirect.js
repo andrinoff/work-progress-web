@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
+
 
 const signinform = document.getElementById('signin-form');
 const signupform = document.getElementById('signup-form');
