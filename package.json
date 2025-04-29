@@ -1,7 +1,7 @@
 {
     "name": "work-progress-website",
-    "version": "1.0.0",
-    "description": "Local server to host Work Progress website",
+    "version": "1.0.1",
+    "description": "VSCode extension to show work progress",
     "main": "server.js",
     "scripts": {
         "start": "node server.js"

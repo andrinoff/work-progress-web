@@ -6,22 +6,60 @@
     <link rel="icon" href="../icon.png" type="image/png">
     <link rel="stylesheet" href="../styles.css">
     <title>Work Progress -- Sign In</title>
+    <style>
+        /* Optional: Basic styling for the GitHub button */
+        .github-signin-button {
+            display: inline-block; /* Or block if you want it full width */
+            padding: 10px 15px;
+            background-color: #333; /* GitHub-like color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 10px; /* Add some space above */
+            cursor: pointer; /* Indicate it's clickable */
+            border: none; /* Remove default button border if using <button> */
+            font-family: inherit; /* Use the same font as other elements */
+            font-size: inherit; /* Use the same font size */
+        }
+        .github-signin-button:hover {
+            background-color: #555;
+        }
+        .divider {
+            text-align: center;
+            margin: 15px 0;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
     <div>
-        <h1 id = "title-signin">Work Progress</h1><br>
-
+        <h1 id="title-signin">Work Progress</h1><br>
     </div>
     <div>
-        <form id = "signin-form">
+        <form id="signin-form">
             <label for="email">Email:</label><br>
-            <input type="email" id="email-input" name="email" required placeholder="name@example.com" ><br>
+            <input type="email" id="email-input" name="email" required placeholder="name@example.com"><br>
             <label for="password">Password:</label><br>
             <input type="password" id="password-input" name="password" required placeholder="ilikecoding2025" minlength="8"><br>
-            <input type="submit" id = "sign-in-button" class="sign-buttons" value="Sign In">
+            <input type="submit" id="sign-in-button" class="sign-buttons" value="Sign In">
         </form>
-        <p>Don't have an account? <a href="signup.html" class ="link-normal" >Sign Up</a></p>
+
+        <!-- Divider -->
+        <div class="divider">OR</div>
+
+        <!-- GitHub Sign In Button -->
+        <div>
+            <!-- Link this href to your GitHub OAuth endpoint -->
+            <!-- <a href="https://github.com/login/oauth/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=http://localhost:3000/auth/github/callback&scope=read:user%20user:email&state=RANDOM_STATE_STRING" id="github-signin-button" class="github-signin-button">
+                Sign in with GitHub
+            </a> -->
+            <!-- Alternatively, use a button element if preferred -->
+            <button type="button" id="github-signin-button" class="github-signin-button">Sign in with GitHub</button> 
+        </div>
+
+        <p style="margin-top: 20px;">Don't have an account? <a href="signup.html" class="link-normal">Sign Up</a></p>
     </div>
-    <script src = "redirect.js"></script>
+    <script src="redirect.js"></script>
 </body>
 </html>
