@@ -140,7 +140,7 @@ if (githubButton) {
         const clientId = process.env.GITHUB_CLIENT_ID;
         const redirectUri = "http://vswork-progress.vercel.app/account/api.html";
         const scope = "user:email";
-        const authUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}`;
+        const authUrl = 
         alert("You will be redirected to GitHub for authentication. ");
         window.location.href = authUrl;
     }
