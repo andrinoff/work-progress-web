@@ -4,3 +4,6 @@
 * Sign up
 
 
+# NEW 1.0.1:
+
+* Sign in using GitHub!
