@@ -133,19 +133,8 @@ if (!signupform && window.location.pathname.includes('signup.html')) {
 
 // --- GitHub Sign-In Button Handler ---
 
-const githubButton = document.getElementById("github-signin-button");
-require('dotenv').config();
-if (githubButton) {
-    githubButton.addEventListener("click", function () {
-        const clientId = process.env.GITHUB_CLIENT_ID;
-        const redirectUri = "http://vswork-progress.vercel.app/account/api.html";
-        const scope = "user:email";
-        const authUrl = 
-        alert("You will be redirected to GitHub for authentication. ");
-        window.location.href = authUrl;
-    }
-    );
-}
+
+
 // --- GitHub Callback Handler ---
 const urlParams = new URLSearchParams(window.location.search);
 const code = urlParams.get('code');
