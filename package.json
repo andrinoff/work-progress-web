@@ -9,7 +9,8 @@
     "author": "Drey Smirnoff",
     "license": "MIT",
     "dependencies": {
-        "cors": "^2.8.5"
+        "cors": "^2.8.5",
+        "dotenv": "^16.5.0"
     },
     "devDependencies": {
         "@types/cors": "^2.8.17"
