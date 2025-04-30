@@ -1,3 +1,10 @@
+// 
+
+
+// --- Sign In and Sign Up Form Handlers ---
+// This script handles the sign-in and sign-up forms on the account page.
+
+
 
 const signinform = document.getElementById('signin-form');
 const signupform = document.getElementById('signup-form');
@@ -123,3 +130,8 @@ if (!signinform && window.location.pathname.includes('signin.html')) {
 if (!signupform && window.location.pathname.includes('signup.html')) {
      console.error('Could not find the signup form element.');
 }
+
+// --- GitHub Sign-In Button Handler ---
+
+
+
