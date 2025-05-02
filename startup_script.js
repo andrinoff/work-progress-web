@@ -7,14 +7,15 @@ function getAPI() {
 function isSignedIn() {
     console.log("Checking if signed in...");
     console.log(localStorage.getItem("signedin"));
-    return localStorage.getItem("signedin") === true;
+    return localStorage.getItem("signedin") == true;
 }
 
 // This will take the "SIGN IN" button and turn it into a "ACCOUNT" button,
 // if the user is signed in. Otherwise, it will do nothing.
 const signInButton = document.getElementById("sign-in");
-console.log(isSignedIn());
-if (isSignedIn()) {
+const isSignIn = localStorage.getItem("signedin");
+
+if (isSignIn) {
     signInButton.innerHTML = "account";
     signInButton.href = "account.html";
 }
