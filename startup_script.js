@@ -11,8 +11,9 @@ function isSignedIn() {
 // This will take the "SIGN IN" button and turn it into a "ACCOUNT" button,
 // if the user is signed in. Otherwise, it will do nothing.
 const signInButton = document.getElementById("sign-in");
-
+console.log(isSignedIn());
 if (isSignedIn()) {
     signInButton.innerHTML = "account";
     signInButton.href = "account.html";
 }
+
