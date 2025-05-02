@@ -14,6 +14,7 @@ function isSignedIn() {
 // if the user is signed in. Otherwise, it will do nothing.
 const signInButton = document.getElementById("sign-in");
 const isSignIn = localStorage.getItem("signedin");
+console.log("isSignIn: " + isSignIn);
 
 if (isSignIn) {
     signInButton.innerHTML = "account";
