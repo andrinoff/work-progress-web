@@ -5,6 +5,8 @@ function getAPI() {
 //  This function checks if the user is signed in by checking localStorage
 //  for the "signedin" key. It returns true if the user is signed in, false otherwise.
 function isSignedIn() {
+    console.log("Checking if signed in...");
+    console.log(localStorage.getItem("signedin"));
     return localStorage.getItem("signedin") === true;
 }
 
