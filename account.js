@@ -48,27 +48,30 @@ if (deleteAccountButton) {
 }
 
 // This is going to display the user's last report 
-
-const lastTimeElement = document.getElementById("last-time");
-
-if (lastTimeElement) {
-    const lastTime = fetch('https://work-progress-backend.vercel.app/api/server', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ apiKey: apiKey, sign : "getLatestTime" })
+const apiKey = localStorage.getItem("apiKey");
+const lastTimeElement = document.getElementById("latest-time");
+const lastTime = fetch('https://work-progress-backend.vercel.app/api/server', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ apiKey: apiKey, sign : "getLatestTime" })
+})
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Server responded with ${response.status}`);
+        }
+        return response.json();
     })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Server responded with ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log("Session end response:", data);
-        })
-        .catch(error => {
-            console.error("Error sending session end data:", error);
-    });
-    lastTimeElement.innerHTML = lastTime + "minutes worked last time";
+    .then(data => {
+        console.log("Session end response:", data);
+        if (data && data.latestTime) {
+            lastTimeElement.innerHTML = "Last report: " + data.latestTime + " minutes";
+        } else {
+            lastTimeElement.innerHTML = "No report found.";
+        }
+    })
+    .catch(error => {
+        console.error("Error sending session end data:", error);
+});
+
     
-}
+
