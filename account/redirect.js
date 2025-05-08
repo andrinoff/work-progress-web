@@ -15,6 +15,7 @@ if (signinform) {
         event.preventDefault();
         const email = document.getElementById('email-input').value;
         const password = document.getElementById('password-input').value;
+        localStorage.setItem("email", email) // storing email in localStorage
         // TODO: Add loading indicator/disable button
 
         fetch("https://work-progress-backend.vercel.app/api/server", {
@@ -72,6 +73,9 @@ if (signupform) {
         event.preventDefault(); // Prevent default page reload
         const email = document.getElementById('email-input').value;
         const password = document.getElementById('password-input').value;
+        localStorage.setItem("email", email)
+        console.log("email: " +  email)
+
         // TODO: Add loading indicator/disable button
 
         fetch("https://work-progress-backend.vercel.app/api/server", {

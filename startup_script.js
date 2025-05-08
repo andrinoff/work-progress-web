@@ -16,8 +16,17 @@ const signInButton = document.getElementById("sign-in");
 const isSignIn = localStorage.getItem("signedin");
 console.log("isSignIn: " + isSignIn);
 
-if (isSignIn) {
-    signInButton.innerHTML = "account";
+if (isSignIn == "true") {
+    signInButton.innerHTML = "Account";
     signInButton.href = "account.html";
+    console.log("TRUE")
+    console.log(localStorage.getItem("signedin"));
+} else if (isSignIn == "false") {
+    console.log("FALSE")
+    signInButton.innerHTML = "Sign In";
+    signInButton.href = "account/signin.html";
+}
+else {
+    console.error("unknown")
 }
 
