@@ -1,3 +1,10 @@
+// 
+
+
+// --- Sign In and Sign Up Form Handlers ---
+// This script handles the sign-in and sign-up forms on the account page.
+
+
 
 const signinform = document.getElementById('signin-form');
 const signupform = document.getElementById('signup-form');
@@ -8,6 +15,7 @@ if (signinform) {
         event.preventDefault();
         const email = document.getElementById('email-input').value;
         const password = document.getElementById('password-input').value;
+        localStorage.setItem("email", email) // storing email in localStorage
         // TODO: Add loading indicator/disable button
 
         fetch("https://work-progress-backend.vercel.app/api/server", {
@@ -65,6 +73,9 @@ if (signupform) {
         event.preventDefault(); // Prevent default page reload
         const email = document.getElementById('email-input').value;
         const password = document.getElementById('password-input').value;
+        localStorage.setItem("email", email)
+        console.log("email: " +  email)
+
         // TODO: Add loading indicator/disable button
 
         fetch("https://work-progress-backend.vercel.app/api/server", {
@@ -123,3 +134,8 @@ if (!signinform && window.location.pathname.includes('signin.html')) {
 if (!signupform && window.location.pathname.includes('signup.html')) {
      console.error('Could not find the signup form element.');
 }
+
+// --- GitHub Sign-In Button Handler ---
+
+
+
