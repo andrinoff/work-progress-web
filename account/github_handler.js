@@ -1,16 +1,23 @@
+// This script handles the redirection logic for the account page with GitHub oAuth.
+
+const GITHUBULR = "https://work-progress-backend.vercel.app/api/github";
+const GITHUBULRDEV = "https://work-progress-backend-git-dev-dreysekis-projects.vercel.app/api/github";
+
+
+
+
 // --- GitHub Callback Handler ---
 const urlParams = new URLSearchParams(window.location.search);
 const code = urlParams.get('code');
 if (code) {
     // If the code is present, make a POST request to your backend to exchange it for an API key
-    fetch("https://work-progress-backend.vercel.app/api/server", {
+    fetch(GITHUBULRDEV, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             code: code,
-            sign: "github" // Indicate this is a GitHub sign-in
         })
     })
     .then(response => response.json())
