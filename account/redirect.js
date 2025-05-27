@@ -1,4 +1,4 @@
-const SINGINURL = "https://work-progress-backend.vercel.app/api/signin";
+const SIGNINURL = "https://work-progress-backend.vercel.app/api/signin";
 const SIGNUPURL = "https://work-progress-backend.vercel.app/api/signup";
 const SIGNINURLDEV = "https://work-progress-backend-git-dev-dreysekis-projects.vercel.app/api/signin";
 const SIGNUPURLDEV = "https://work-progress-backend-git-dev-dreysekis-projects.vercel.app/api/signup";
@@ -20,7 +20,7 @@ if (signinform) {
         localStorage.setItem("email", email) // storing email in localStorage
         // TODO: Add loading indicator/disable button
 
-        fetch(SIGNINURLDEV, {
+        fetch(SIGNINURL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -79,7 +79,7 @@ if (signupform) {
 
         // TODO: Add loading indicator/disable button
 
-        fetch(SIGNUPURLDEV, {
+        fetch(SIGNUPURL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
