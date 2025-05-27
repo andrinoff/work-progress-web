@@ -1,5 +1,7 @@
-// 
-
+const SINGINURL = "https://work-progress-backend.vercel.app/api/signin";
+const SIGNUPURL = "https://work-progress-backend.vercel.app/api/signup";
+const SIGNINURLDEV = "https://work-progress-backend-git-dev-dreysekis-projects.vercel.app/api/signin";
+const SIGNUPURLDEV = "https://work-progress-backend-git-dev-dreysekis-projects.vercel.app/api/signup";
 
 // --- Sign In and Sign Up Form Handlers ---
 // This script handles the sign-in and sign-up forms on the account page.
@@ -18,7 +20,7 @@ if (signinform) {
         localStorage.setItem("email", email) // storing email in localStorage
         // TODO: Add loading indicator/disable button
 
-        fetch("https://work-progress-backend.vercel.app/api/server", {
+        fetch(SIGNINURLDEV, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -26,7 +28,6 @@ if (signinform) {
             body: JSON.stringify({
                 email: email,
                 password: password,
-                sign: "in" // Corrected typo from "up" to "in" for sign-in
             })
         })
         .then(response => {
@@ -78,7 +79,7 @@ if (signupform) {
 
         // TODO: Add loading indicator/disable button
 
-        fetch("https://work-progress-backend.vercel.app/api/server", {
+        fetch(SIGNUPURLDEV, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
