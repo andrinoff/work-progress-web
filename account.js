@@ -50,10 +50,10 @@ if (deleteAccountButton) {
 // This is going to display the user's last report 
 const apiKey = localStorage.getItem("apiKey");
 const lastTimeElement = document.getElementById("latest-time");
-const lastTime = fetch('https://work-progress-backend.vercel.app/api/server', {
+const lastTime = fetch('https://work-progress-backend.vercel.app/api/latest', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ apiKey: apiKey, sign : "getLatestTime" })
+    body: JSON.stringify({ apiKey: apiKey })
 })
     .then(response => {
         if (!response.ok) {
