@@ -11,7 +11,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const code = urlParams.get('code');
 if (code) {
     // If the code is present, make a POST request to your backend to exchange it for an API key
-    fetch(GITHUBULRDEV, {
+    fetch(GITHUBULR, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
