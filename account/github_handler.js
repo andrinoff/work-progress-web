@@ -22,8 +22,9 @@ if (code) {
     })
     .then(response => response.json())
     .then(data => {
-        if (data && data.apiKey) {
+        if (data && data.apiKey && data.email) {
             localStorage.setItem('apiKey', data.apiKey);
+            localStorage.setItem('email', data.email);
             window.location.href = "api.html";
         } else {
             console.error('GitHub sign-in failed:', data);
@@ -34,4 +35,5 @@ if (code) {
         console.error('Error during GitHub sign-in:', error);
         alert('An error occurred during GitHub sign-in. Please try again.');
     });
+    
 }
