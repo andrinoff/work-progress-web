@@ -1,7 +1,7 @@
 // This script handles the redirection logic for the account page with GitHub oAuth.
 
 const GITHUBULR = "https://work-progress-backend.vercel.app/api/github";
-const GITHUBULRDEV = "https://work-progress-backend-git-dev-dreysekis-projects.vercel.app/api/github";
+
 
 
 
